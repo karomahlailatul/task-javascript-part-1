@@ -1,3 +1,4 @@
+//fungsi validasi
 function average_grade_UN(mtk, bhsindo, bhsing, ipa) {
     try {
         if (mtk > 100) throw "Nilai Matematika lebih dari 100 mohon input yang benar";
@@ -32,8 +33,8 @@ function average_grade_UN(mtk, bhsindo, bhsing, ipa) {
     }
 };
 
+//callback nilai
 function callback_average_nilai(mtk, bhsindo, bhsing, ipa) {
-
     let sum_nilai = (mtk + bhsindo + bhsing + ipa);
     var average_nilai_hasil = sum_nilai / 4;
 
@@ -42,6 +43,7 @@ function callback_average_nilai(mtk, bhsindo, bhsing, ipa) {
     callback_average_grade(average_nilai_hasil);
 };
 
+//callback grade
 function callback_average_grade(average_nilai_hasil) {
 
     if (average_nilai_hasil <= 100 && average_nilai_hasil >= 90) {
@@ -59,4 +61,4 @@ function callback_average_grade(average_nilai_hasil) {
 };
 
 
-average_grade_UN(89, "89", 99, "90");
+average_grade_UN(89, "90", 99, "90");
