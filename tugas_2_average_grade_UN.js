@@ -1,10 +1,3 @@
-function cekparameter() {
-
-
-
-}
-
-
 function average_grade_UN(mtk, bhsindo, bhsing, ipa) {
     try {
 
@@ -55,4 +48,4 @@ function average_grade_UN(mtk, bhsindo, bhsing, ipa) {
     }
 };
 
-average_grade_UN(100, "110", 100, "100");
+average_grade_UN(100, "80", 100, "100");
