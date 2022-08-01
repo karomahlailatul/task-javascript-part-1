@@ -1,6 +1,5 @@
 function average_grade_UN(mtk, bhsindo, bhsing, ipa) {
     try {
-
         if (mtk > 100) throw "Nilai Matematika lebih dari 100 mohon input yang benar";
         if (bhsindo > 100) throw "Nilai Bahasa Indonesia lebih dari 100 mohon input yang benar";
         if (bhsing > 100) throw "Nilai Bahasa Inggris lebih dari 100 mohon input yang benar";
@@ -26,26 +25,38 @@ function average_grade_UN(mtk, bhsindo, bhsing, ipa) {
         bhsing = Number(bhsing);
         ipa = Number(ipa);
 
-        let sum_nilai = (mtk + bhsindo + bhsing + ipa);
-        let average_nilai_hasil = sum_nilai / 4;
-
-        console.log(`Rata-rata ${average_nilai_hasil}`);
-
-        if (average_nilai_hasil <= 100 && average_nilai_hasil >= 90) {
-            console.log("Grade = A");
-        } else if (average_nilai_hasil <= 89 && average_nilai_hasil >= 80) {
-            console.log("Grade = B");
-        } else if (average_nilai_hasil <= 79 && average_nilai_hasil >= 70) {
-            console.log("Grade = C");
-        } else if (average_nilai_hasil <= 69 && average_nilai_hasil >= 60) {
-            console.log("Grade = D");
-        } else if (average_nilai_hasil <= 59 && average_nilai_hasil >= 0) {
-            console.log("Grade = E");
-        };
+        callback_average_nilai(mtk, bhsindo, bhsing, ipa);
 
     } catch (error) {
         console.log(error)
     }
 };
 
-average_grade_UN(100, "80", 100, "100");
+function callback_average_nilai(mtk, bhsindo, bhsing, ipa) {
+
+    let sum_nilai = (mtk + bhsindo + bhsing + ipa);
+    var average_nilai_hasil = sum_nilai / 4;
+
+    console.log(`Rata-rata ${average_nilai_hasil}`);
+
+    callback_average_grade(average_nilai_hasil);
+};
+
+function callback_average_grade(average_nilai_hasil) {
+
+    if (average_nilai_hasil <= 100 && average_nilai_hasil >= 90) {
+        console.log("Grade = A");
+    } else if (average_nilai_hasil <= 89 && average_nilai_hasil >= 80) {
+        console.log("Grade = B");
+    } else if (average_nilai_hasil <= 79 && average_nilai_hasil >= 70) {
+        console.log("Grade = C");
+    } else if (average_nilai_hasil <= 69 && average_nilai_hasil >= 60) {
+        console.log("Grade = D");
+    } else if (average_nilai_hasil <= 59 && average_nilai_hasil >= 0) {
+        console.log("Grade = E");
+    };
+
+};
+
+
+average_grade_UN(89, "89", 99, "90");
