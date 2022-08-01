@@ -52,4 +52,5 @@ const {
         city
     }
 } = data;
-console.log(`Street: ${street}` + ` ` + `City : ${city}`);
+console.log(`Street : ${street}
+City : ${city}`);

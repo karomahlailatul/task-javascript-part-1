@@ -1,9 +1,27 @@
+function cekparameter() {
+
+
+
+}
+
+
 function average_grade_UN(mtk, bhsindo, bhsing, ipa) {
     try {
-        if (mtk == "") throw "Nilai Matematika Kosong Mohon diisi";
-        if (bhsindo == "") throw "Nilai Bahasa Indonesia Kosong Mohon diisi";
-        if (bhsing == "") throw "Nilai Bahasa Inggris Kosong Mohon diisi";
-        if (ipa == "") throw "Nilai IPA Kosong Mohon diisi";
+
+        if (mtk > 100) throw "Nilai Matematika lebih dari 100 mohon input yang benar";
+        if (bhsindo > 100) throw "Nilai Bahasa Indonesia lebih dari 100 mohon input yang benar";
+        if (bhsing > 100) throw "Nilai Bahasa Inggris lebih dari 100 mohon input yang benar";
+        if (ipa > 100) throw "Nilai IPA lebih dari 100 mohon input yang benar";
+
+        if (mtk <= 0) throw "Nilai Matematika tidak boleh atau kurang dari 0 mohon input yang benar";
+        if (bhsindo <= 0) throw "Nilai Bahasa Indonesia tidak boleh atau kurang dari 0 mohon input yang benar";
+        if (bhsing <= 0) throw "Nilai Bahasa Inggris tidak boleh atau kurang dari 0 mohon input yang benar";
+        if (ipa <= 0) throw "Nilai IPA tidak boleh kurang dari 0 atau mohon input yang benar";
+
+        if (mtk == "") throw "Nilai Matematika kosong mohon diisi";
+        if (bhsindo == "") throw "Nilai Bahasa Indonesia kosong mohon diisi";
+        if (bhsing == "") throw "Nilai Bahasa Inggris kosong mohon diisi";
+        if (ipa == "") throw "Nilai IPA kosong mohon diisi";
 
         if (isNaN(mtk)) throw "Mohon Input Nilai Matematika dengan Angka";
         if (isNaN(bhsindo)) throw "Mohon Input Nilai Bahasa Indonesia dengan Angka";
@@ -32,10 +50,9 @@ function average_grade_UN(mtk, bhsindo, bhsing, ipa) {
             console.log("Grade = E");
         };
 
-
     } catch (error) {
         console.log(error)
     }
 };
 
-average_grade_UN(80, "78", 75, "91");
+average_grade_UN(100, "110", 100, "100");
